@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Insurance Fraud Detection</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:40px;
+}
+
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:12px 30px;
+    max-width:900px;
+}
+
+label{
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:6px;
+}
+
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    font-size:16px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Insurance Fraud Detection</h2>
+
+<form action="/predict" method="post">
+
+<div class="container">
+
+<label>months_as_customer</label> <input type="number" name="f1">
+
+<label>policy_deductable</label> <input type="number" name="f2">
+
+<label>umbrella_limit</label> <input type="number" name="f3">
+
+<label>capital-gains</label> <input type="number" name="f4">
+
+<label>capital-loss</label> <input type="number" name="f5">
+
+<label>incident_hour_of_the_day</label> <input type="number" name="f6">
+
+<label>number_of_vehicles_involved</label> <input type="number" name="f7">
+
+<label>bodily_injuries</label> <input type="number" name="f8">
+
+<label>witnesses</label> <input type="number" name="f9">
+
+<label>injury_claim</label> <input type="number" name="f10">
+
+<label>property_claim</label> <input type="number" name="f11">
+
+<label>vehicle_claim</label> <input type="number" name="f12">
+
+<label>policy_annual_premium</label> <input type="number" name="f13">
+
+<label>policy_csl_250/500</label> <input type="number" name="f14">
+
+<label>policy_csl_500/1000</label> <input type="number" name="f15">
+
+<label>insured_sex_MALE</label> <input type="number" name="f16">
+
+<label>insured_education_level_College</label> <input type="number" name="f17">
+
+<label>insured_education_level_High School</label> <input type="number" name="f18">
+
+<label>insured_education_level_JD</label> <input type="number" name="f19">
+
+<label>insured_education_level_MD</label> <input type="number" name="f20">
+
+<label>insured_education_level_Masters</label> <input type="number" name="f21">
+
+<label>insured_education_level_PhD</label> <input type="number" name="f22">
+
+<label>insured_occupation_armed-forces</label> <input type="number" name="f23">
+
+<label>insured_occupation_craft-repair</label> <input type="number" name="f24">
+
+<label>insured_occupation_exec-managerial</label> <input type="number" name="f25">
+
+<label>insured_occupation_farming-fishing</label> <input type="number" name="f26">
+
+<label>insured_occupation_handlers-cleaners</label> <input type="number" name="f27">
+
+<label>insured_occupation_machine-op-inspct</label> <input type="number" name="f28">
+
+<label>insured_occupation_other-service</label> <input type="number" name="f29">
+
+<label>insured_occupation_priv-house-serv</label> <input type="number" name="f30">
+
+<label>insured_occupation_prof-specialty</label> <input type="number" name="f31">
+
+<label>insured_occupation_protective-serv</label> <input type="number" name="f32">
+
+<label>insured_occupation_sales</label> <input type="number" name="f33">
+
+<label>insured_occupation_tech-support</label> <input type="number" name="f34">
+
+<label>insured_occupation_transport-moving</label> <input type="number" name="f35">
+
+<label>insured_relationship_not-in-family</label> <input type="number" name="f36">
+
+<label>insured_relationship_other-relative</label> <input type="number" name="f37">
+
+<label>insured_relationship_own-child</label> <input type="number" name="f38">
+
+<label>insured_relationship_unmarried</label> <input type="number" name="f39">
+
+<label>insured_relationship_wife</label> <input type="number" name="f40">
+
+<label>incident_type_Parked Car</label> <input type="number" name="f41">
+
+<label>incident_type_Single Vehicle Collision</label> <input type="number" name="f42">
+
+<label>incident_type_Vehicle Theft</label> <input type="number" name="f43">
+
+<label>collision_type_Front Collision</label> <input type="number" name="f44">
+
+<label>collision_type_Rear Collision</label> <input type="number" name="f45">
+
+<label>collision_type_Side Collision</label> <input type="number" name="f46">
+
+<label>incident_severity_Minor Damage</label> <input type="number" name="f47">
+
+<label>incident_severity_Total Loss</label> <input type="number" name="f48">
+
+<label>incident_severity_Trivial Damage</label> <input type="number" name="f49">
+
+<label>authorities_contacted_Fire</label> <input type="number" name="f50">
+
+<label>authorities_contacted_Other</label> <input type="number" name="f51">
+
+<label>authorities_contacted_Police</label> <input type="number" name="f52">
+
+<label>property_damage_NO</label> <input type="number" name="f53">
+
+<label>property_damage_YES</label> <input type="number" name="f54">
+
+<label>police_report_available_NO</label> <input type="number" name="f55">
+
+<label>police_report_available_YES</label> <input type="number" name="f56">
+
+</div>
+
+<button type="submit">Predict</button>
+
+</form>
+
+<h3>{{ prediction_text }}</h3>
+
+</body>
+</html>
